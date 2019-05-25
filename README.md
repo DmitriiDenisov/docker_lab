@@ -1,11 +1,14 @@
 # Docker_lab
 
-
+All most important commands you can find here:
 https://medium.com/the-code-review/top-10-docker-commands-you-cant-live-without-54fb6377f481
 
-sudo service docker status
-docker rm 9f516a41b3b3 - удаляем контейнер, удаляются также данные
-docker ps -a - показываем все (в т.ч остановленные)
+## 1.sudo service docker status
+```docker rm 9f516a41b3b3``` - delete container, volumne will be also deleted
+
+## 2. ```docker ps -a```
+Show all containers (included stopped as well)
+
 docker images - все имаджи. При создании идентичного имаджа 
 docker image prune - удаляем все неисп имаджи
 docker image rm 8709e7f8a4dd
