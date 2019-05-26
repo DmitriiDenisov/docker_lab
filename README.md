@@ -52,3 +52,12 @@ Runs bash inside container. I.e it is running in background mode and we attach t
 
 ### docker exec f9a965092e9e ps 
 Shows which commands were run inside container
+
+### docker logs 186346daa85d
+Show logs for container
+
+### docker stop $(docker ps -a -q)
+Stops all running containers
+
+### docker attach -it 186346daa85d
+Attaches to running container
