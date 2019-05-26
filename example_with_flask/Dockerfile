@@ -4,11 +4,12 @@ FROM base_image
 # RUN apt-get install -y python-pip python-dev build-essentia
 # копируем папку с скриптом:
 COPY here_scripts /app/here_scripts
-WORKDIR /app # делаем текущую директорию app
+# делаем текущую директорию app
+WORKDIR /app
 # RUN pip install -r /app/requirements.txt
- # запускаем скрипт:
+# запускаем скрипт:
 ENTRYPOINT ["python3", "here_scripts/main.py"]
-# ENTRYPOINT ["gunicorn", "-w", "8", "--bind", "0.0.0.0:80", "--chdir", "here_scripts", "main:app"] #
+# ENTRYPOINT ["gunicorn", "-w", "8", "--bind", "0.0.0.0:80", "--chdir", "here_scripts", "main:app"]
 # ENTRYPOINT gunicorn -w 8 --bind 0.0.0.0:80 main:app
 # CMD ["--workers=8 --bind=0.0.0.0:80 main:app"]
 
