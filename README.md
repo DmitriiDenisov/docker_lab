@@ -17,7 +17,7 @@ Show all images
 Delete all unusable images
 
 ### docker image rm 8709e7f8a4dd
-Delete one image with id 8709e7f8a4dd
+Delete one image with id 8709e7f8a4dd-
 
 ### docker rmi $(docker images -q)
 Delete all images
@@ -39,6 +39,9 @@ Run a container from image tag_of_image
 
 ### docker run --rm -v `pwd`:/app -p 80:80 —-name my_cont_name -d image_name
 -v mount current folder with app. I.e current folder will be available in /app inside a container. All changes with files will be visible inside container immediately
+
+### docker run -v `pwd`/models:/app/models auto_selphie_image
+Just another example how to use -v
 
 ### docker run -it --entrypoint bash flask_image
 -t allows to show inside terminal all comands from container
