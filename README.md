@@ -67,3 +67,7 @@ Stops all running containers
 
 ### docker attach -it 186346daa85d
 Attaches to running container
+
+### docker build -f Dockerfile.db .
+### docker build -f Dockerfile.web .
+For multiple docker files
