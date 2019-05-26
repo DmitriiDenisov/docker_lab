@@ -10,27 +10,43 @@ Delete container, volumne will be also deleted
 ### docker ps -a
 Show all containers (included stopped as well)
 
-docker images - все имаджи. При создании идентичного имаджа 
-docker image prune - удаляем все неисп имаджи
-docker image rm 8709e7f8a4dd
-docker run -p 80:80 --name xxxxxxx321312312312 --rm try_flask # имя даем контейнеру 
-—-rm при run, после stop он удаляет контейнер. 
--d - detach
+### docker images
+Show all images 
+
+### docker image prune
+Delete all unusable images
+
+### docker image rm 8709e7f8a4dd
+Delete one image with id 8709e7f8a4dd
+
+### docker rmi $(docker images -q)
+Delete all images
+
+### docker build -t tag_of_image .
+Build an image with name tag_of_image from current path
+
+### docker run tag_of_image
+Run a container from image tag_of_image
+
+### docker run -p 80:80 --name qwerty --rm try_flask
+-p allows to throw ports. In this example 80-th in container port will be available on 80-th port on localhost (localhost:80)
+--name allows to give name to our container
+--rm will delete container after it stops
+-d detach from container so it will run in background mode
+
+### docker run -p 80:80 -it --name qwerty --rm --entrypoint bash try_flask
+--entrypoint Replace entry point with bash. Previous entry point will be ignored
+
+### docker run --rm -v `pwd`:/app -p 80:80 —-name my_cont_name -d image_name
+-v mount current folder with app. I.e current folder will be available in /app inside a container. All changes with files will be visible inside container immediately
+
 docker exec -it 2cb98f63c67b bash # запускаем bash внутри контейнера
-docker run -p 80:80 -it --name xxxxxxx321312312312 --rm --entrypoint bash try_flask - зподменяем entry point под bash
-from python3:basis - для наследования от другого image
--v позволяет подмонтировать локальные файлы к докеру, мы можем редактировать локально и видеть изменения в контейнере. Плюс файлы не удалятся  
-docker run -p 80:80 -v `pwd`:/app -d test_2
 
-ma	
-docker run --rm -v `pwd`:/app -p 80:80 —-name my_cont_name -d image_name
-
-gunicorn -w 8 --bind=0.0.0.0:80 main:app
 
 docker run --rm -v `pwd`:/app -p 80:80 -it test_2
 
 docker rm $(docker ps -a -q) - удалить все остановленные контейнеры
-docker rmi $(docker images -q) - удалить все images
+
 
 docker run --rm -v `pwd`:/app -p 80:80 -d --name gunic_cont gunic_image
 docker exec f9a965092e9e ps - вывести какие команды выполнялись внутри докера
