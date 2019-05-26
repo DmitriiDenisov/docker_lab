@@ -40,23 +40,15 @@ Run a container from image tag_of_image
 ### docker run --rm -v `pwd`:/app -p 80:80 —-name my_cont_name -d image_name
 -v mount current folder with app. I.e current folder will be available in /app inside a container. All changes with files will be visible inside container immediately
 
-docker exec -it 2cb98f63c67b bash # запускаем bash внутри контейнера
+### docker run -t --entrypoint bash flask_image
+-t allows to show inside terminal all comands from container
+-i interactive mode when you can send commands from terminal
 
+### docker rm $(docker ps -a -q)
+Delete all stopped containers
 
-docker run --rm -v `pwd`:/app -p 80:80 -it test_2
+### docker exec -it 2cb98f63c67b bash
+Runs bash inside container. I.e it is running in background mode and we attach to it and run bash inside
 
-docker rm $(docker ps -a -q) - удалить все остановленные контейнеры
-
-
-docker run --rm -v `pwd`:/app -p 80:80 -d --name gunic_cont gunic_image
-docker exec f9a965092e9e ps - вывести какие команды выполнялись внутри докера
-
--------------------------
-
-## Чтобы установить Rabbit-MQ:
-```brew services start rabbitmq```
-Ссылка на RabbitMQ:
-
-## Как запустить воркер на текущей машине:
-1. Создать venv в папке с проектом, сделать ```pip install requirements.txt```
-2. В консольке сначала cd в папку с проектом, затем: ```source venv/bin/activate``` (активируем терминал в venv)
+### docker exec f9a965092e9e ps 
+Shows which commands were run inside container
