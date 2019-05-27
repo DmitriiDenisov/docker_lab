@@ -71,3 +71,9 @@ Attaches to running container
 ### docker build -f Dockerfile.db .
 ### docker build -f Dockerfile.web .
 For multiple docker files
+
+### Add user to sudos (so no need to write each time sudo):
+One of the following:
+- sudo chmod 666 /var/run/docker.sock
+- sudo usermod -aG docker $dmitryhse
+- sudo chown dmitryhse dmitryhse/
