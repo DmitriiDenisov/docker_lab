@@ -76,4 +76,4 @@ For multiple docker files
 One of the following:
 - sudo chmod 666 /var/run/docker.sock
 - sudo usermod -aG docker $dmitryhse
-- sudo chown <user> <folder>
+- sudo chown /<user/> /<folder/>
