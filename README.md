@@ -81,4 +81,31 @@ One of the following:
 - sudo chown user_name folder_name
 --------
 ## docker-compose:
+The main function of Docker Compose is the creation of microservice architecture, meaning the containers and the links between them. But the tool is capable of much more:
 
+### docker-compose build
+Building images (if an appropriate Dockerfile is provided)
+
+### docker-compose up
+Run containers 
+
+### docker-compose stop
+Stop services
+
+### docker-compose down
+ Stop and remove containers, networks, images, and volumes
+
+### docker-compose config
+Show Dockerfile
+
+### docker-compose ps
+Lists containers related to images declared in docker-compose file
+
+### docker-compose down --rmi <all|local> 
+Down and remove images
+
+### docker-compose up -d
+Run containers and detach 
+
+
+In example to check if works just run in bash: ```curl localhost:5000``` or ```curl 0.0.0.0:5000```
