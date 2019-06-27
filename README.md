@@ -1,7 +1,7 @@
 # Docker_lab
 
 All most important commands you can find here:
-https://medium.com/the-code-review/top-10-docker-commands-you-cant-live-without-54fb6377f481
+https://tproger.ru/translations/top-10-docker-commands/
 
 ### sudo service docker status
 ```docker rm 9f516a41b3b3```
