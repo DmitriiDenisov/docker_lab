@@ -79,3 +79,6 @@ One of the following:
 - sudo chmod 666 /var/run/docker.sock
 - sudo usermod -aG docker $dmitryhse
 - sudo chown user_name folder_name
+--------
+## docker-compose:
+
