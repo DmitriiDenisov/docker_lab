@@ -107,5 +107,8 @@ Down and remove images
 ### docker-compose up -d
 Run containers and detach 
 
+### docker-compose images
+List of images
 
-In example to check if works just run in bash: ```curl localhost:5000``` or ```curl 0.0.0.0:5000```
+
+In example from folder 'example_docker_compose_flask' in order to check if docker-compose just run in bash: ```curl localhost:5000``` or ```curl 0.0.0.0:5000```
