@@ -1,0 +1,9 @@
+version: '3.1' # version 
+services: # here list all services
+  flask_ser: # first service
+    build: . # docker will build using Dockerfile from current folder
+    restart: always # restart option from docker run
+    ports: # ports outside
+      - "5000:5000"
+    volumes: # mount folder
+      - ./this_mount_folder:/app/this_mount_folder
