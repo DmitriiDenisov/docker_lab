@@ -39,10 +39,10 @@ Run a container from image tag_of_image
 ### docker run -p 80:80 -it --name qwerty --rm --entrypoint bash try_flask
 --entrypoint Replace entry point with bash. Previous entry point will be ignored
 
-### docker run --rm -v `pwd`:/app -p 80:80 —-name my_cont_name -d image_name
+### docker run --rm -v $(pwd):/app -p 80:80 —-name my_cont_name -d image_name
 -v mount current folder with app. I.e current folder will be available in /app inside a container. All changes with files will be visible inside container immediately
 
-### docker run -v `pwd`/models:/app/models auto_selphie_image
+### docker run -v $(pwd)/models:/app/models auto_selphie_image
 Just another example how to use -v
 
 ### docker run -it --entrypoint bash flask_image
@@ -66,6 +66,9 @@ Show logs for container
 
 ### docker stop $(docker ps -a -q)
 Stops all running containers
+
+### docker start 677f9de92ed3
+Starts again given container with id 677f9de92ed3
 
 ### docker attach -it 186346daa85d
 Attaches to running container
