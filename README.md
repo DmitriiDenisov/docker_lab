@@ -77,6 +77,9 @@ Attaches to running container
 ### docker build -f Dockerfile.web .
 For multiple docker files
 
+### docker run -e port=5000 curr-serv
+Pass ENV parameter inside docker container 
+
 ### Add user to sudos (so no need to write each time sudo):
 One of the following:
 - sudo chmod 666 /var/run/docker.sock
