@@ -87,9 +87,13 @@ One of the following:
 - sudo chown user_name folder_name
 --------
 ### Publish your docker image on Docker Hub:
+
 1.`docker login`
+
 2. Create new repo on Docker Hub
+
 3. To push: `docker push dmitrydenisov/curr-serv:tagname`
+
 4. To Pull: `docker pull dmitrydenisov/curr-serv`
 
 You can also set up automatic builds in Docker Hub, details: https://www.youtube.com/watch?v=sl2mfyjnkXk 
