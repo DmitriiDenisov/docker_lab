@@ -5,6 +5,10 @@ All most important commands you can find here:
 - https://tproger.ru/translations/top-10-docker-commands/
 - https://towardsdatascience.com/15-docker-commands-you-should-know-970ea5203421
 
+## (Ubunt) Install docker
+[link1](https://docs.docker.com/engine/install/ubuntu/)
+[link2](https://www.digitalocean.com/community/tutorials/docker-ubuntu-18-04-1-ru#%D1%88%D0%B0%D0%B3-2-%E2%80%94-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-docker-%D0%B1%D0%B5%D0%B7-sudo-(%D0%BE%D0%BF%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE))
+
 ### sudo service docker status
 ```docker rm 9f516a41b3b3```
 Delete container, volumne will be also deleted
