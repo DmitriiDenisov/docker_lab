@@ -50,9 +50,14 @@ Run a container from image tag_of_image
 ### docker run -v $(pwd)/models:/app/models auto_selphie_image
 Just another example how to use -v
 
-### docker run -it --entrypoint bash flask_image
+### (Ubuntu) docker run -it --entrypoint bash flask_image
 -t allows to show inside terminal all comands from container
 -i interactive mode when you can send commands from terminal
+
+### (Alpine) docker run -it --entrypoint /bin/ash test_im_2
+-t allows to show inside terminal all comands from container
+-i interactive mode when you can send commands from terminal
+
 
 ### docker run --restart always flask_image
 Always restart container if it falls
